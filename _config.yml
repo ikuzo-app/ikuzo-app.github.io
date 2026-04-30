@@ -1,0 +1,6 @@
+title: ikuzo! Exercise Tracker
+description: ikuzo! Exercise Tracker helps you stay consistent with your training and progress.
+url: "https://ikuzo-app.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: pretty
