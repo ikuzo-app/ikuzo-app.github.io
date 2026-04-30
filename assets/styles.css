@@ -1,0 +1,280 @@
+:root {
+  --bg: #f6f0e7;
+  --surface: rgba(255, 251, 246, 0.82);
+  --surface-strong: #fffaf4;
+  --text: #1c2430;
+  --muted: #5f6877;
+  --line: rgba(28, 36, 48, 0.1);
+  --accent: #1d4ed8;
+  --accent-strong: #1e40af;
+  --shadow: 0 18px 50px rgba(28, 36, 48, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(29, 78, 216, 0.16), transparent 30%),
+    radial-gradient(circle at 85% 10%, rgba(59, 130, 246, 0.12), transparent 24%),
+    linear-gradient(180deg, #fbf7f1 0%, var(--bg) 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 32px;
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-header {
+  padding: 8px 0 24px;
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(28, 36, 48, 0.14);
+}
+
+.brand-text {
+  font-family: "Fraunces", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--text);
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #f7fbf8;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-1px);
+  background: var(--accent-strong);
+}
+
+.nav-button-secondary {
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  line-height: 0.94;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.05;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.lead {
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.subtitle {
+  color: var(--accent-strong);
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.landing {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 168px);
+  padding: 48px 24px 72px;
+  text-align: center;
+}
+
+.landing-logo {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.landing-logo-image {
+  width: min(240px, 52vw);
+  height: auto;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.logo-wordmark {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.landing-copy {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  max-width: 760px;
+}
+
+.legal-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.legal-hero {
+  padding: 32px 0 4px;
+  max-width: 800px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.legal-updated {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.legal-card {
+  display: grid;
+  gap: 14px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+}
+
+.legal-card p {
+  color: var(--muted);
+}
+
+.legal-card a {
+  color: var(--accent-strong);
+}
+
+.site-footer {
+  padding: 30px 2px 0;
+  margin-top: 24px;
+  border-top: 1px solid rgba(31, 36, 48, 0.08);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    max-width: 11ch;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 20px, 1120px);
+    padding-top: 14px;
+  }
+
+  .site-header,
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .landing {
+    min-height: calc(100vh - 190px);
+    padding: 32px 12px 56px;
+  }
+
+  .landing-logo-image {
+    width: min(200px, 64vw);
+    border-radius: 24px;
+  }
+
+  .legal-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+}

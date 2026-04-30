@@ -4,3 +4,4 @@ url: "https://ikuzo-app.github.io"
 baseurl: ""
 markdown: kramdown
 permalink: pretty
+repository: ikuzo-app/ikuzo-app.github.io
